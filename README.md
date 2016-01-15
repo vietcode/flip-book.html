@@ -3,6 +3,11 @@ Riot.js tag to display contents as book pages.
 
 This is a project set up to help promoting writing open source software among Vietnamese developers.
 
+## Inspirations
+
+- http://www.turnjs.com/#samples/steve-jobs
+- http://pageflip-books.com/#meetpageflip/page/2-3
+
 ## Example Usage
 
 ```html
@@ -46,5 +51,6 @@ This is a project set up to help promoting writing open source software among Vi
 - Using Riot.js.
 - No dependency.
 - Styles should be as customizable as possible outside of the tag.
+- The more options it has, the better.
 - (Bonus) Support lazy loading of pages through AJAX.
 - (Bonus) High FPS.
