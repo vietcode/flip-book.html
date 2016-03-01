@@ -1,0 +1,35 @@
+<table-of-content>
+  <ul>
+    <li each={ item, idx in this.items }>
+      <a href="#{ item.id }" title="{ item.innerText }" tabindex="{ idx + 1 }">
+        { item.innerText }
+      </a>
+    </li>
+  </ul>
+
+  <style scoped>
+    :scope > ul {
+      counter-reset: table-of-content-counter;
+      list-style-type: none;
+    }
+
+    :scope > ul > li {
+      counter-increment: table-of-content-counter;
+    }
+
+    li:before {
+      content: counter(table-of-content-counter)'. ';
+    }
+  </style>
+
+  <script>
+    this.on('mount', function() {
+      var selector = opts.for,
+        targets = document.querySelectorAll(selector);
+
+      this.items = Array.prototype.slice.call(targets);
+      this.update();
+    });
+  </script>
+
+</table-of-content>

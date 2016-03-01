@@ -1,5 +1,5 @@
-# flip-book.tag
-Riot.js tag to display contents as book pages.
+# flip-book.html
+Web component to display contents as book pages.
 
 This is a project set up to help promoting writing open source software among Vietnamese developers.
 
@@ -33,10 +33,10 @@ This is a project set up to help promoting writing open source software among Vi
     <p>Everybody lives happily ever after.</p>
   </div>
 
-  <div class="hard page>
+  <div class="hard page">
   </div>
 
-  <div class="hard page>
+  <div class="hard page">
     <img src="/images/backCover.jpg" alt="Back cover image" />
   </div>
 </flip-book>

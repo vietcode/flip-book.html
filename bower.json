@@ -1,0 +1,29 @@
+{
+  "name": "flip-book.tag",
+  "description": "A custom element for a flippable book",
+  "main": "flip-book.html",
+  "authors": [
+    "Son Tran-Nguyen"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "custom element",
+    "riot.js",
+    "web component",
+    "book",
+    "flip"
+  ],
+  "homepage": "https://github.com/vietcode/flip-book.tag",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "riot": "^2.3.16"
+  }
+}

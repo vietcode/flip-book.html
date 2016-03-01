@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flip Book</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/boom.css">
+</head>
+<body>
+  <article is="flip-book" page="1" display="double" pages="200" duration="600">
+    <section class="hard">
+      <h1><code>&lt;flip-book&gt;</code></h1>
+      <h2>Displays content in a book-like view.</h2>
+    </section>
+
+    <section class="hard">
+      
+    </section>
+
+    <section>
+      <h1>Table of Content</h1>
+
+      <table-of-content for=".chapter h1"></table-of-content>
+    </section>
+
+    <section>
+      <!-- Back of Table of Content -->
+    </section>
+
+    <section class="chapter">
+      <h1 id="getting-started">Getting Started</h1>
+    </section>
+
+    <section>
+      <p>To be written</p>
+    </section>
+
+    <section class="chapter">
+      <h1 id="making-of">The Making Of</h1>
+
+      <p>We start by writing the basic markup for the book. We use <code>&lt;section&gt;</code> to represent a single book page within the component.</p>
+
+      <p>In browsers with Javascript disabled, the content is simply displayed linear. Javascript will transform the content into a flippable book.</p>
+
+      <p>We then use some styles to make the content looks nicer, using boom.css (http://alistapart.com/article/boom)</p>
+    </section>
+
+    <section>
+      
+    </section>
+
+    <section>
+      <h1>The End</h1>
+    </section>
+
+    <section class="hard">
+    </section>
+
+    <section class="hard">
+    </section>
+  </article>
+
+  <script type="text/javascript" src="/js/shims.js"></script>
+  <script type="riot/tag" src="/js/table-of-content.html"></script>
+  <script type="riot/tag" src="flip-book.html"></script>
+  <script type="text/javascript" src="/lib/riot/riot+compiler.min.js"></script>
+
+  <script type="text/javascript">
+    riot.mount('flip-book', {
+      "page": 2,
+      "display": "double",
+      "pages": 200,
+      "duration": 600,
+      "selector": "section"
+    });
+  </script>
+</body>
+</html>
