@@ -1,0 +1,2 @@
+:scope{perspective:1200px}@page{size:7in 9.25in;margin:27mm 16mm 27mm 16mm}@page :left{@top-left{content:''}}@page blank :left{@top-left{content:normal}}@page :right{@top-right{content:string(header, first)}}@page :left{@bottom-left{content:counter(page)}}@page front-matter :left{@bottom-left{content:counter(page, lower-roman)}}
+/*# sourceMappingURL=flip-book.css.map */

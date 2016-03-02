@@ -1,0 +1,26 @@
+
+<flip-book><yield/>
+  <style scoped>:scope{perspective:1200px}@page{size:7in 9.25in;margin:27mm 16mm 27mm 16mm}@page :left{@top-left{content:''}}@page blank :left{@top-left{content:normal}}@page :right{@top-right{content:string(header, first)}}@page :left{@bottom-left{content:counter(page)}}@page front-matter :left{@bottom-left{content:counter(page, lower-roman)}}
+/*# sourceMappingURL=flip-book.css.map */
+
+  </style>
+  <script>var root = this.root;
+
+this.on('mount', function() {
+  // When all the DOM elements in `<yield/>` are mounted
+  var selector = '> section', pages;
+  try {
+    pages = root.querySelectorAll(':scope' + selector);
+  } catch (error) {
+    var id = root.id; // remember current element id
+    root.id = 'ID_' + Date.now(); // assign new unique id
+    pages = document.querySelectorAll('#' + root.id + selector);
+    root.id = id; // restore previous id
+  }
+});
+
+this.on('update', function() {
+  // Handle changes.
+});
+  </script>
+</flip-book>

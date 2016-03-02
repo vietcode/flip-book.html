@@ -37,6 +37,8 @@
     <section class="chapter">
       <h1 id="making-of">The Making Of</h1>
 
+      <h2>Prepare the markups</h2>
+
       <p>We start by writing the basic markup for the book. We use <code>&lt;section&gt;</code> to represent a single book page within the component.</p>
 
       <p>In browsers with Javascript disabled, the content is simply displayed linear. Javascript will transform the content into a flippable book.</p>
@@ -45,7 +47,22 @@
     </section>
 
     <section>
-      
+      <h2>Modularity</h2>
+
+      <p>Instead of writing everything in a single <code>flip-book.html</code>, we separate the three logical components (HTML, CSS, JS) and only merge them at compile time.</p>
+
+      <p>First thing we did is create a `src` folder with separate subfolders for logic (JS files, or even CoffeeScript files), styles (less files) and template (jade file). The choices are just personal, with the advantage of being less code, and more error checking at compile-time.</p>
+
+      <p>The template file allow us to inline styles and scripts from separate external files, which are the compiled from the corresponding pre-processor source files.</p>
+
+      <h2>Using Gulp to build the element</h2>
+
+      <p>Gulp keeps the build process under control. And in our structure, to build the elements we need Gulp to follow the following steps:</p>
+
+      <ul>
+        <li>Compile the element's .less files to .css</li>
+        <li>Compile the element's .jade file to .html, embedding the .css and .js files.</li>
+      </ul>
     </section>
 
     <section>
@@ -61,7 +78,7 @@
 
   <script type="text/javascript" src="/js/shims.js"></script>
   <script type="riot/tag" src="/js/table-of-content.html"></script>
-  <script type="riot/tag" src="flip-book.html"></script>
+  <script type="riot/tag" src="/dist/flip-book.html"></script>
   <script type="text/javascript" src="/lib/riot/riot+compiler.min.js"></script>
 
   <script type="text/javascript">
@@ -70,7 +87,7 @@
       "display": "double",
       "pages": 200,
       "duration": 600,
-      "selector": "section"
+      "for": "section"
     });
   </script>
 </body>
